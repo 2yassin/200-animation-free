@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>200 حركة احترافية - JS</title>
+    <title>200 حركة احترافية</title>
     <style>
         * {
             margin: 0;
@@ -411,391 +411,33 @@
             letter-spacing: 2px;
             margin-top: 30px;
         }
-/* ============================================
-   الشبكة — Mobile First (min-width)
-   ============================================ */
 
-/* 1) الوضع الافتراضي = الهاتف الصغير (عمودان) */
-.showcase {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-            padding: 28px 100px;
-            margin: 0 auto;
-    max-width: 1800px;
-}
-
-/* الهيدر الافتراضي (هاتف صغير) */
-.header {
-    text-align: center;
-    padding: 20px 12px 14px;
-    background: linear-gradient(180deg, rgba(15, 12, 41, 0.9) 0%, transparent 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.header h1 {
-    font-size: 18px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3, #54a0ff);
-    background-size: 300% 300%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradientShift 6s ease-in-out infinite;
-}
-
-.header p {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 9px;
-    margin-top: 5px;
-    letter-spacing: 1px;
-}
-
-/* البطاقة الافتراضية (هاتف صغير) */
-.effect {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    padding: 8px 4px 22px;
-    min-height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    position: relative;
-    overflow: hidden;
-    --accent: #48dbfb;
-}
-
-.effect-number {
-    font-size: 9px;
-    font-weight: 700;
-    color: var(--accent);
-    font-family: monospace;
-    opacity: 0.85;
-    letter-spacing: 1px;
-    margin-top: 4px;
-}
-
-.effect svg.icon-svg {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke: var(--accent);
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    filter: drop-shadow(0 0 8px var(--accent));
-}
-
-/* العناصر المتحركة الافتراضية */
-.anim-box,
-.anim-circle {
-    width: 20px;
-    height: 20px;
-}
-
-.anim-ring {
-    width: 24px;
-    height: 24px;
-}
-
-.anim-bar {
-    width: 3px;
-    height: 22px;
-}
-
-.anim-text {
-    font-size: 14px;
-}
-
-.anim-dots span {
-    width: 5px;
-    height: 5px;
-}
-
-/* نافذة الكود الافتراضية (هاتف) */
-.modal-overlay {
-    padding: 10px;
-}
-
-.modal {
-    max-height: 92vh;
-    border-radius: 12px;
-}
-
-.modal-header {
-    padding: 12px 16px;
-}
-
-.modal-header h3 {
-    font-size: 12px;
-}
-
-.modal-tabs {
-    padding: 10px 16px;
-}
-
-.tab {
-    padding: 5px 14px;
-    font-size: 11px;
-}
-
-.modal-body {
-    padding: 12px 16px;
-}
-
-.modal-body pre {
-    font-size: 10px;
-    padding: 12px;
-    max-height: 45vh;
-}
-
-.modal-footer {
-    padding: 10px 16px;
-    flex-direction: column-reverse;
-    align-items: stretch;
-}
-
-.copy-btn {
-    width: 100%;
-    padding: 10px;
-}
-
-.modal-info {
-    text-align: center;
-    font-size: 10px;
-}
-
-.footer {
-    font-size: 9px;
-    padding: 14px;
-}
-
-/* ============================================
-   هاتف كبير (≥ 400px)
-   ============================================ */
-@media (min-width: 400px) {
-    .showcase {
-        gap: 15px;
-        padding: 12px 8px;
-    }
-
-    .header {
-        padding: 24px 16px 18px;
-    }
-
-    .header h1 {
-        font-size: 22px;
-        letter-spacing: 1px;
-    }
-
-    .header p {
-        font-size: 10px;
-    }
-
-    .effect {
-        min-height: 140px;
-        padding: 10px 6px 26px;
-    }
-
-    .effect svg.icon-svg {
-        width: 28px;
-        height: 28px;
-    }
-
-    .effect-number {
-        font-size: 10px;
-    }
-
-    .anim-box,
-    .anim-circle {
-        width: 24px;
-        height: 24px;
-    }
-
-    .anim-ring {
-        width: 28px;
-        height: 28px;
-    }
-
-    .anim-text {
-        font-size: 16px;
-    }
-
-    .anim-dots span {
-        width: 6px;
-        height: 6px;
-    }
-
-    .modal-header h3 {
-        font-size: 13px;
-    }
-
-    .modal-body pre {
-        font-size: 11px;
-    }
-}
-
-/* ============================================
-   تابلت عمودي / هاتف كبير جداً (≥ 600px)
-   ============================================ */
-@media (min-width: 600px) {
-    .showcase {
-        gap: 15px;
-        padding: 16px 14px;
-    }
-
-    .header {
-        padding: 28px 20px 20px;
-    }
-
-    .header h1 {
-        font-size: 28px;
-        letter-spacing: 1.5px;
-    }
-
-    .header p {
-        font-size: 11px;
-    }
-
-    .effect {
-        min-height: 160px;
-        padding: 12px 8px 30px;
-    }
-
-    .effect svg.icon-svg {
-        width: 32px;
-        height: 32px;
-    }
-
-    .effect-number {
-        font-size: 11px;
-    }
-
-    /* زر الكود يظهر دائماً على التابلت (لا hover) */
-    .btn-code {
-        opacity: 1;
-        width: 26px;
-        height: 26px;
-    }
-
-    .btn-code svg {
-        width: 13px;
-        height: 13px;
-    }
-
-    .modal-overlay {
-        padding: 20px;
-    }
-
-    .modal-footer {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .copy-btn {
-        width: auto;
-        padding: 9px 22px;
-    }
-
-    .modal-info {
-        text-align: right;
-    }
-}
-
-/* ============================================
-   تابلت أفقي / حاسوب صغير (≥ 769px) — 3 أعمدة
-   ============================================ */
-@media (min-width: 769px) {
-    .showcase {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px 20px;
-    }
-
-    .header h1 {
-        font-size: 36px;
-        letter-spacing: 2px;
-    }
-
-    .header p {
-        font-size: 12px;
-    }
-
-    .effect {
-        min-height: 180px;
-        padding: 14px 10px 30px;
-    }
-
-    .effect svg.icon-svg {
-        width: 36px;
-        height: 36px;
-    }
-
-    /* على الحاسوب: زر الكود يظهر فقط عند hover */
-    .btn-code {
-        opacity: 0;
-    }
-
-    .effect:hover .btn-code {
-        opacity: 1;
-    }
-}
-
-/* ============================================
-   حاسوب (≥ 1024px) — 3 أعمدة بمساحة أكبر
-   ============================================ */
-@media (min-width: 1024px) {
-    .showcase {
-        gap: 30px;
-        padding: 24px 40px;
-    }
-
-    .header h1 {
-        font-size: 42px;
-        letter-spacing: 3px;
-    }
-
-    .effect {
-        min-height: 220px;
-        padding: 18px 10px 36px;
-    }
-
-    .effect svg.icon-svg {
-        width: 45px;
-        height: 45px;
-    }
-}
-
-/* ============================================
-   شاشة كبيرة (≥ 1400px) — 3 أعمدة مع max-width
-   ============================================ */
-@media (min-width: 1400px) {
-    .showcase {
-        gap: 40px;
-        padding: 28px 60px;
-        max-width: 1400px;
-    }
-
-    .header h1 {
-        font-size: 45px;
-    }
-}
-
-/* ============================================
-   شاشة عملاقة (≥ 1600px) — 4 أعمدة
-   ============================================ */
-@media (min-width: 1600px) {
-    .showcase {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 35px;
-        max-width: 1800px;
-    }
-}
+        /* ===== الجوال ===== */
+        @media (max-width: 768px) {
+            .showcase {
+                padding: 16px 20px;
+                gap: 15px;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .effect {
+                min-height: 160px;
+                padding: 12px 8px 30px;
+            }
+
+            .effect svg.icon-svg {
+                width: 32px;
+                height: 32px;
+            }
+
+            .btn-code {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -1056,7 +698,7 @@
                 copyBtn.classList.add("copied");
                 const orig = copyBtn.textContent;
                 copyBtn.textContent = " تم النسخ";
-                showToast("تم نسخ الكود بنجاح");
+                showToast(" تم نسخ الكود بنجاح");
                 setTimeout(() => {
                     copyBtn.classList.remove("copied");
                     copyBtn.textContent = orig;
